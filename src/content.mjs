@@ -1,0 +1,12 @@
+export const services = [
+  { id: 'mobiliario', number: '01', title: 'Mobiliário por medida', short: 'Uma peça que encontra o seu lugar.', description: 'Arrumação para uma entrada estreita, uma estante que acompanha a sala ou uma secretária para o canto certo. O ponto de partida é o espaço e a forma como é usado.', includes: ['Levantamento das necessidades e medidas', 'Proposta de organização e materiais', 'Detalhes de acabamento e utilização'], detail: 'Neste cenário fictício, o pedido serve para iniciar uma conversa sobre o espaço. Não é um orçamento nem uma encomenda.' },
+  { id: 'restauro', number: '02', title: 'Restauro e renovação', short: 'Continuar a história de uma peça.', description: 'Olhar para um móvel existente e perceber o que merece ser preservado, reparado ou repensado. Uma abordagem que começa pela observação, antes de propor uma intervenção.', includes: ['Descrição do estado da peça', 'Identificação das prioridades de intervenção', 'Exploração de acabamentos e usos'], detail: 'Uma avaliação real exigiria observar a peça. Esta demonstração não faz diagnósticos de conservação nem promete resultados.' },
+  { id: 'planeamento', number: '03', title: 'Planeamento de interiores', short: 'Mais intenção em cada escolha.', description: 'Pensar na disposição, nas proporções e na relação entre as peças. Um serviço conceptual para quem quer organizar um espaço com escolhas coerentes e práticas.', includes: ['Definição do uso e das prioridades', 'Organização do espaço e da circulação', 'Orientação de materiais e peças'], detail: 'O âmbito é a organização e o mobiliário. Não são apresentados serviços de arquitectura, engenharia ou certificações profissionais.' },
+];
+
+export const routes = [
+  { path: '/', label: 'Início', title: 'Mobiliário com intenção', description: 'Forma & Grão: demonstração fictícia de um atelier de mobiliário, restauro e planeamento de interiores.' },
+  { path: '/servicos/', label: 'Serviços', title: 'Serviços', description: 'Conheça os serviços fictícios de mobiliário por medida, restauro e planeamento do atelier Forma & Grão.' },
+  { path: '/sobre/', label: 'O atelier', title: 'O atelier', description: 'O conceito e a abordagem do Forma & Grão, um negócio inteiramente fictício criado para demonstração.' },
+  { path: '/contacto/', label: 'Contacto', title: 'Preparar um pedido', description: 'Prepare e descarregue um pedido de demonstração. Os dados não são enviados nem guardados por um servidor.' },
+];
