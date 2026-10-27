@@ -42,7 +42,10 @@ test('404, redireccionamento, HEAD e métodos não permitidos',async()=>{
 test('ficheiros fora da saída não são servidos e MIME de módulos é correcto',async()=>{
  const response=await fetch(base+'/assets/main.js');assert.match(response.headers.get('content-type'),/javascript/);
  assert.equal((await fetch(base+'/package.json')).status,404);
- assert.equal((await fetch(base+'/%2e%2e%5cpackage.json')).status,403);
+ // Uma barra invertida é separador no Windows e carácter literal no Linux.
+ const traversal=await fetch(base+'/%2e%2e%5cpackage.json');
+ assert.ok([403,404].includes(traversal.status));
+ assert.doesNotMatch(await traversal.text(), /"name"\s*:\s*"forma-e-grao-business-website"/);
  assert.match(response.headers.get('content-security-policy'),/connect-src 'none'/);
 });
 test('formulário tem labels, erros associados e estados acessíveis',()=>{

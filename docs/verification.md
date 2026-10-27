@@ -57,3 +57,7 @@ A preparação está registada em [public-demo-readiness.md](public-demo-readine
 - Consola: zero avisos/erros nas quatro páginas e interacções normais observadas. A resposta 404 intencional foi testada separadamente e regressou correctamente à homepage com estilo carregado.
 - Não foram testados leitores de ecrã, todos os browsers, JavaScript desactivado ou falha forçada de download; os limites anteriores mantêm-se. Sem publicação real, não se afirma ter validado o domínio/infraestrutura do GitHub.
 - Não foi inicializado Git, não foi criado repositório remoto e não houve commit, push ou deploy. Portfolio preservado.
+
+## Compatibilidade do teste no GitHub Actions
+
+Na primeira execução em Linux, o teste de isolamento da pasta esperava o código 403 observado em Windows para um caminho com barra invertida codificada. Em Linux, esse carácter é literal e o servidor respondeu 404, sem expor o ficheiro. O teste passou a aceitar 403 ou 404 e a verificar também que o conteúdo de package.json não é devolvido. Não houve alteração do servidor ou do website para esta correcção.
