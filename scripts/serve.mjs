@@ -4,7 +4,7 @@ import { resolve, sep, extname } from 'node:path';
 import { pathToFileURL } from 'node:url';
 import { build, root } from './build.mjs';
 import { normaliseBasePath, contentSecurityPolicy } from '../src/paths.mjs';
-const mime = {'.html':'text/html; charset=utf-8','.css':'text/css; charset=utf-8','.js':'text/javascript; charset=utf-8','.svg':'image/svg+xml'};
+const mime = {'.webp':'image/webp','.html':'text/html; charset=utf-8','.css':'text/css; charset=utf-8','.js':'text/javascript; charset=utf-8','.svg':'image/svg+xml'};
 export function createServer(directory = resolve(root, 'dist'), { basePath = '/' } = {}) {
   directory = resolve(directory);
   basePath = normaliseBasePath(basePath);

@@ -314,6 +314,8 @@ p {
 .hero-image img {
   width:100%;
   height:auto;
+  aspect-ratio:8/9;
+  object-fit:cover;
   display:block;
   background:var(--sand)
 }
